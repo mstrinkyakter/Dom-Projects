@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM PROJECT</title>
     <style>
-      .align{
-        justify-content: center;
-        align-items: center;
+      body{
+       font-size: 16px;
+       width: 100vw;
+       height: 100vh;
+      }
+      .container{
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       }
+       button{
+       font-size: 20px;
+       padding: 1rem 3rem;
        
-      }
-    
-      button{
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-top: 10px;
-        padding-bottom: 10px;
       }
       button:hover{
         background-color: black;
@@ -26,14 +30,12 @@
     </style>
 </head>
 <body>
-   <section class="align">
-    <div>
-      <h1>Changing Background Color By Clicking</h1>
+   <div class="container" id="root">
+   
+      <h1>Changing Background Color By Click the following button</h1>
+      <button id="btn"> Changing Color</button>
+    
   </div>
-  <div >
-      <button>Click</button>
-  </div>
-   </section>
    <script src="script.js"></script>
 </body>
 </html>
