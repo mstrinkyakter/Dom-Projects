@@ -12,6 +12,7 @@ function main(){
     });
     const copyBtn = document.getElementById('copy-btn').addEventListener('click', function(){
         navigator.clipboard.writeText(output.value);
+        generatToastMessage(`${output.value}copied`);
     });
    
 };
@@ -23,3 +24,11 @@ function generateHexColor (){
 
     return `#${red.toString(16)}${green.toString(16)}${blue.toString(16)}`;
 };
+
+
+function generatToastMessage(msg){
+    const div = document.createElement ('div');
+    div.innerText = msg;
+    div.className = 'toast-message';
+    document.body.appendChild(div);
+}
